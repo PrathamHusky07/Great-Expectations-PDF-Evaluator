@@ -1,0 +1,90 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "part2",
+  "expectations": [
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Credit Score"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Number of Units"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "Number of Units",
+        "value_set": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_median_to_be_between",
+      "kwargs": {
+        "column": "Original Combined Loan-to-Value (CLTV)",
+        "max": "100",
+        "min": "10"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "Loan Purpose",
+        "value_set": [
+          "P",
+          "C",
+          "N"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "Occupancy Status",
+        "value_set": [
+          "P",
+          "I",
+          "S"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "First Time Homebuyer Flag",
+        "value_set": [
+          "Y",
+          "N"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_median_to_be_between",
+      "kwargs": {
+        "column": "First Payment Date",
+        "max_value": 202212,
+        "min_value": 202201
+      },
+      "meta": {}
+    }
+  ],
+  "ge_cloud_id": null,
+  "meta": {
+    "great_expectations_version": "0.17.19"
+  }
+}

@@ -1,0 +1,25 @@
+digraph "Workflow Diagram" {
+	graph [fontcolor="#2D3436" fontname="Sans-Serif" fontsize=15 label="Workflow Diagram" nodesep=0.60 pad=2.0 rankdir=LR ranksep=0.75 splines=ortho]
+	node [fixedsize=true fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13 height=1.4 imagescale=true labelloc=b shape=box style=rounded width=1.4]
+	edge [color="#7B8894"]
+	edd059feb3454f829a9a946c2d7613ec [label=user height=1.9 image="/Users/prathamesh/anaconda3/lib/python3.11/site-packages/resources/onprem/client/user.png" shape=none]
+	bfb640d071e2438aa0f60a653e7de0ea [label=Streamlit height=1.9 image="part_1/images/streamlit.png" shape=none]
+	subgraph cluster_Libraries {
+		graph [bgcolor="#E5F5FD" fontname="Sans-Serif" fontsize=12 label=Libraries labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		bc44918772c34f40a86e0c2c5f75be1a [label=PyPDF height=1.9 image="part_1/images/streamlit.png" shape=none]
+		"44fc30de53d540248e56ccc1bcacc821" [label=Nougat height=1.9 image="part_1/images/streamlit.png" shape=none]
+	}
+	subgraph cluster_Codebase {
+		graph [bgcolor="#E5F5FD" fontname="Sans-Serif" fontsize=12 label=Codebase labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		c9325ea4069a466c86fef327f4751e70 [label=Python height=1.9 image="/Users/prathamesh/anaconda3/lib/python3.11/site-packages/resources/programming/language/python.png" shape=none]
+		"1505b6bcec0b4eb3bc0f4d0d9a7aaef5" [label=Colab height=1.9 image="part_1/images/streamlit.png" shape=none]
+	}
+	"9970525bc55f4d76973ee2e8e6176ff1" [label=Streamlit height=1.9 image="/part_1/images/streamlit.png" shape=none]
+	edd059feb3454f829a9a946c2d7613ec -> bfb640d071e2438aa0f60a653e7de0ea [label="User interacts with Streamlit" dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	bfb640d071e2438aa0f60a653e7de0ea -> bc44918772c34f40a86e0c2c5f75be1a [label="If PyPDF is Selected" dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	bfb640d071e2438aa0f60a653e7de0ea -> "44fc30de53d540248e56ccc1bcacc821" [label="If Nougat is Selected" dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	bc44918772c34f40a86e0c2c5f75be1a -> c9325ea4069a466c86fef327f4751e70 [label="Calling the function in Python" dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	c9325ea4069a466c86fef327f4751e70 -> "9970525bc55f4d76973ee2e8e6176ff1" [label="View Parsed PDF" dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"44fc30de53d540248e56ccc1bcacc821" -> "1505b6bcec0b4eb3bc0f4d0d9a7aaef5" [label="Calling the function in Python" dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"1505b6bcec0b4eb3bc0f4d0d9a7aaef5" -> "9970525bc55f4d76973ee2e8e6176ff1" [label="View Parsed PDF" dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+}

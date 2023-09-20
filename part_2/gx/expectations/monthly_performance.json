@@ -1,0 +1,52 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "monthly_performance",
+  "expectations": [
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Loan_Age"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_median_to_be_between",
+      "kwargs": {
+        "column": "Estimated_Loan_to_Value(ELTV)",
+        "max": "1000",
+        "min": "1"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_median_to_be_between",
+      "kwargs": {
+        "column": "Monthly_Reporting_Period",
+        "max_value": 202312,
+        "min_value": 202201
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_median_to_be_between",
+      "kwargs": {
+        "column": "Current_Interest_Rate",
+        "max": "4",
+        "min": "1"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "Loan_Sequence_Number",
+        "regex": "^[a-zA-Z0-9]{1,12}$"
+      },
+      "meta": {}
+    }
+  ],
+  "ge_cloud_id": null,
+  "meta": {
+    "great_expectations_version": "0.17.19"
+  }
+}
